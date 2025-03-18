@@ -1,27 +1,51 @@
-// my_app.dart
 import 'package:flutter/material.dart';
-import '../constants/constants.dart';
+import 'auth/login.dart';
+import 'auth/register.dart';
 
 class FlutterPracticeApp extends StatelessWidget {
   const FlutterPracticeApp({super.key});
 
-const Text.rich(
-  TextSpan(
-    text: 'Hello', // default text style
-    children: <TextSpan>[
-      TextSpan(text: ' beautiful ', style: TextStyle(fontStyle: FontStyle.italic)),
-      TextSpan(text: 'world', style: TextStyle(fontWeight: FontWeight.bold)),
-    ],
-  ),
-)
-
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: appTitle,
-      home: Scaffold(
-        appBar: AppBar(title: const Text(appTitle)),
-        body: const Center(child: Text(appTitle)),
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        appBar: AppBar(
+          bottom: TabBar(tabs: [Tab(text: 'Login'), Tab(text: 'Register')]),
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text.rich(
+                TextSpan(
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  children: <TextSpan>[
+                    TextSpan(
+                      text: 'find',
+                      style: TextStyle(fontStyle: FontStyle.italic),
+                    ),
+                    TextSpan(text: ' A Tutor'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+        body: const TabBarView(children: [Login(), Register()]),
+        bottomNavigationBar: const BottomAppBar(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text.rich(
+                TextSpan(
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  children: <TextSpan>[
+                    TextSpan(text: '<> with \u2764 by Muhammad Asad Ullah'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

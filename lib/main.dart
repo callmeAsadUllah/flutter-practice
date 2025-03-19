@@ -9,6 +9,10 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: appTitle, home: const FlutterPracticeApp());
+    return MaterialApp(
+      title: appTitle,
+      debugShowCheckedModeBanner: false,
+      home: const FlutterPracticeApp(),
+    );
   }
 }

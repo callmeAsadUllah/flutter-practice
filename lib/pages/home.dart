@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 // import 'package:flutter_practice/assignments/p01.dart';
 // import 'package:flutter_practice/assignments/p02.dart';
 // import 'package:flutter_practice/assignments/p03.dart';
-import 'package:flutter_practice/assignments/p04.dart';
+// import 'package:flutter_practice/assignments/p04.dart';
+// import 'package:flutter_practice/assignments/p05.dart';
+// import 'package:flutter_practice/assignments/p06.dart';
+import 'package:flutter_practice/assignments/p07.dart';
+// import 'package:flutter_practice/assignments/p09.dart';
 
 class FlutterPracticeApp extends StatelessWidget {
   const FlutterPracticeApp({super.key});
@@ -17,21 +21,14 @@ class FlutterPracticeApp extends StatelessWidget {
             Text.rich(
               TextSpan(
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                children: <TextSpan>[
-                  TextSpan(
-                    text: 'find',
-                    style: TextStyle(fontStyle: FontStyle.italic),
-                  ),
-                  TextSpan(text: ' A Tutor'),
-                ],
+                children: <TextSpan>[TextSpan(text: 'Flutter Practice App')],
               ),
             ),
           ],
         ),
       ),
-
-      body: P04(),
-      bottomNavigationBar: const BottomAppBar(
+      body: P07(),
+      bottomNavigationBar: BottomAppBar(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

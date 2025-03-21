@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// import 'package:flutter_practice/assignments/p09.dart';
 import 'constants/constants.dart';
 import 'pages/home.dart';
 
@@ -11,8 +12,6 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: appTitle,
-      theme: ThemeData(primarySwatch: Colors.blue),
-      darkTheme: ThemeData(primarySwatch: Colors.blue),
       debugShowCheckedModeBanner: false,
       home: const FlutterPracticeApp(),
     );

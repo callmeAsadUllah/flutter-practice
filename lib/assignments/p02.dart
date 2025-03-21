@@ -12,7 +12,7 @@ class P02 extends StatelessWidget {
           radius: 56,
           backgroundImage: AssetImage('images/avatar-svgrepo-com.png'),
         ),
-        SizedBox(width: 16),
+        const SizedBox(width: 16),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
